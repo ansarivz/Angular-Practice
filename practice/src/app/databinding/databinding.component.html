@@ -1,0 +1,24 @@
+<p>
+  Data Binding works - String Interpolation
+</p>
+
+    <h5>My id is {{ profileId }} in {{ profileCompany }}.</h5>
+    <p>Employee Status - {{ getEmployeeStatus() }}</p>    
+
+
+<p>
+    Data Binding - Property binding
+</p>
+
+<p>
+    <label>Update Status</label>
+    <!-- <input type="text" (input)='OnupdateStatus($event)' placeholder="Am not two-way binding"> -->
+    <input type="text" [(ngModel)]='currentstatus' placeholder="Am two-way binding">
+    
+</p>
+
+<p>Current Status: {{ currentstatus }}</p>
+
+<button class="btn" [disabled]='!getEmployeeStatus' (click)='OnCurrentStatus()'>
+    Notification
+</button>
